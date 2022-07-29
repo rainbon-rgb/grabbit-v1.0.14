@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>890384030566-l3oj5b3r8iihg1d602i0f0qer1gb8tsk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.890384030566-l3oj5b3r8iihg1d602i0f0qer1gb8tsk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAGaSJhDY0-AZFEECu0cAmEjRXooNwKwfc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>890384030566</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.grabbit.app</string>
+	<key>PROJECT_ID</key>
+	<string>grabbit-a5d27</string>
+	<key>STORAGE_BUCKET</key>
+	<string>grabbit-a5d27.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:890384030566:ios:c72ddb67cfd0edd7cfc6a7</string>
+	<key>DATABASE_URL</key>
+	<string>https://grabbit-a5d27-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

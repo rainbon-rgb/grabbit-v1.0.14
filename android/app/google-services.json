@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "890384030566",
+    "firebase_url": "https://grabbit-a5d27-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "grabbit-a5d27",
+    "storage_bucket": "grabbit-a5d27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890384030566:android:6d1f785b67c1a716cfc6a7",
+        "android_client_info": {
+          "package_name": "com.grabbit.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890384030566-bkqm9si0qd4kntc5l3b2urpg967fqrl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByoeTPW6GZRh7J4GHtIjn5XpZfKkuwUcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890384030566-bkqm9si0qd4kntc5l3b2urpg967fqrl5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "890384030566-jje5vhteciticfh7ceej14p27cq4m150.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grabbitapp.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890384030566:android:2b95d600af0e1967cfc6a7",
+        "android_client_info": {
+          "package_name": "com.grabbitapp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890384030566-bkqm9si0qd4kntc5l3b2urpg967fqrl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByoeTPW6GZRh7J4GHtIjn5XpZfKkuwUcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890384030566-bkqm9si0qd4kntc5l3b2urpg967fqrl5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "890384030566-jje5vhteciticfh7ceej14p27cq4m150.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grabbitapp.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
