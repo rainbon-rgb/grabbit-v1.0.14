@@ -18,6 +18,7 @@ dependencies:
   cloud_firestore: ^3.1.5
   permission_handler: 8.1.6
   images_picker: ^1.2.10
+  tflite: ^1.1.2
 dev_dependencies: 
   flutter_test: 
     sdk: flutter

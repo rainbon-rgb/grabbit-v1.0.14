@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grabbit/core/app_export.dart';
 
-class CustomDropDown extends StatefulWidget {
+class CustomDropDown extends StatelessWidget {
   CustomDropDown(
       {this.shape,
       this.padding,
@@ -50,15 +50,10 @@ class CustomDropDown extends StatefulWidget {
   FormFieldValidator<SelectionPopupModel>? validator;
 
   @override
-  State<CustomDropDown> createState() => _CustomDropDownState();
-}
-
-class _CustomDropDownState extends State<CustomDropDown> {
-  @override
   Widget build(BuildContext context) {
-    return widget.alignment != null
+    return alignment != null
         ? Align(
-            alignment: widget.alignment ?? Alignment.center,
+            alignment: alignment ?? Alignment.center,
             child: _buildDropDownWidget(),
           )
         : _buildDropDownWidget();
@@ -66,14 +61,14 @@ class _CustomDropDownState extends State<CustomDropDown> {
 
   _buildDropDownWidget() {
     return Container(
-      width: getHorizontalSize(widget.width ?? 0),
-      margin: widget.margin,
+      width: getHorizontalSize(width ?? 0),
+      margin: margin,
       child: DropdownButtonFormField<SelectionPopupModel>(
-        focusNode: widget.focusNode,
-        icon: widget.icon,
+        focusNode: focusNode,
+        icon: icon,
         style: _setFontStyle(),
         decoration: _buildDecoration(),
-        items: widget.items?.map((SelectionPopupModel item) {
+        items: items?.map((SelectionPopupModel item) {
           return DropdownMenuItem<SelectionPopupModel>(
             value: item,
             child: Text(
@@ -83,21 +78,21 @@ class _CustomDropDownState extends State<CustomDropDown> {
           );
         }).toList(),
         onChanged: (value) {
-          widget.onChanged!(value!);
+          onChanged!(value!);
         },
-        validator: widget.validator,
+        validator: validator,
       ),
     );
   }
 
   _buildDecoration() {
     return InputDecoration(
-      hintText: widget.hintText ?? "",
+      hintText: hintText ?? "",
       hintStyle: _setFontStyle(),
       border: _setBorderStyle(),
       focusedBorder: _setBorderStyle(),
-      prefixIcon: widget.prefix,
-      prefixIconConstraints: widget.prefixConstraints,
+      prefixIcon: prefix,
+      prefixIconConstraints: prefixConstraints,
       filled: _setFilled(),
       isDense: true,
       contentPadding: _setPadding(),
@@ -105,7 +100,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
   }
 
   _setFontStyle() {
-    switch (widget.fontStyle) {
+    switch (fontStyle) {
       default:
         return TextStyle(
           color: ColorConstant.black90060,
@@ -119,7 +114,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
   }
 
   _setOutlineBorderRadius() {
-    switch (widget.shape) {
+    switch (shape) {
       default:
         return BorderRadius.circular(
           getHorizontalSize(
@@ -130,7 +125,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
   }
 
   _setBorderStyle() {
-    switch (widget.variant) {
+    switch (variant) {
       case DropDownVariant.OutlineBlack9001e:
         return OutlineInputBorder(
           borderRadius: _setOutlineBorderRadius(),
@@ -151,7 +146,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
   }
 
   _setFilled() {
-    switch (widget.variant) {
+    switch (variant) {
       case DropDownVariant.OutlineBlack9001e:
         return false;
       default:
@@ -160,7 +155,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
   }
 
   _setPadding() {
-    switch (widget.padding) {
+    switch (padding) {
       default:
         return getPadding(
           all: 15,

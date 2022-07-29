@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:grabbit/core/app_export.dart';
 import 'package:grabbit/core/utils/validation_functions.dart';
 import 'package:grabbit/widgets/custom_text_form_field.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 // ignore_for_file: must_be_immutable
 class RabbitDetailsForMeatSellingScreen
@@ -22,79 +21,48 @@ class RabbitDetailsForMeatSellingScreen
                         key: _formKey,
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         child: Container(
-                            height: size.height,
-                            width: size.width,
-                            child: Stack(children: [
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
                               Align(
-                                  alignment: Alignment.topLeft,
+                                  alignment: Alignment.centerLeft,
+                                  child: GestureDetector(
+                                      onTap: () {
+                                        onTapImgBack();
+                                      },
+                                      child: Padding(
+                                          padding:
+                                              getPadding(top: 13, right: 10),
+                                          child: CommonImageView(
+                                              imagePath: ImageConstant.imgBack,
+                                              height: getVerticalSize(28.00),
+                                              width:
+                                                  getHorizontalSize(48.00))))),
+                              Align(
+                                  alignment: Alignment.center,
                                   child: Container(
                                       margin: getMargin(
-                                          top: 19, right: 10, bottom: 19),
+                                          left: 23,
+                                          top: 1,
+                                          right: 23,
+                                          bottom: 20),
                                       child: Column(
                                           mainAxisSize: MainAxisSize.min,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
                                           children: [
                                             Align(
-                                                alignment: Alignment.centerLeft,
-                                                child: Container(
-                                                    width: size.width,
-                                                    margin:
-                                                        getMargin(right: 10),
-                                                    child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          GestureDetector(
-                                                              onTap: () {
-                                                                onTapImgBack();
-                                                              },
-                                                              child: Padding(
-                                                                  padding:
-                                                                      getPadding(
-                                                                          top:
-                                                                              1),
-                                                                  child: CommonImageView(
-                                                                      imagePath:
-                                                                          ImageConstant
-                                                                              .imgBack,
-                                                                      height: getVerticalSize(
-                                                                          28.00),
-                                                                      width: getHorizontalSize(
-                                                                          48.00)))),
-                                                          Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 51),
-                                                              child: Text(
-                                                                  "lbl_details"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtPoppinsSemiBold20
-                                                                      .copyWith()))
-                                                        ]))),
-                                            Align(
-                                                alignment:
-                                                    Alignment.centerRight,
+                                                alignment: Alignment.center,
                                                 child: Padding(
-                                                    padding: getPadding(
-                                                        left: 10, top: 37),
+                                                    padding:
+                                                        getPadding(right: 1),
                                                     child: Row(
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
-                                                                .end,
+                                                                .spaceBetween,
                                                         crossAxisAlignment:
                                                             CrossAxisAlignment
                                                                 .start,
@@ -132,21 +100,20 @@ class RabbitDetailsForMeatSellingScreen
                                                                                 top: 29,
                                                                                 right: 15,
                                                                                 bottom: 29),
-                                                                            child: CommonImageView(imagePath: ImageConstant.imgImgarabbitone, height: getVerticalSize(73.00), width: getHorizontalSize(116.00))))
+                                                                            child: CommonImageView(imagePath: ImageConstant.imgCalifornianrab, height: getVerticalSize(73.00), width: getHorizontalSize(116.00))))
                                                                   ])),
                                                           CustomTextFormField(
-                                                              width: 158,
+                                                              width: 143,
                                                               focusNode:
                                                                   FocusNode(),
                                                               controller: controller
-                                                                  .statusController,
+                                                                  .groupFiftyNineController,
                                                               hintText:
                                                                   "lbl_status"
                                                                       .tr,
                                                               margin: getMargin(
-                                                                  left: 14,
-                                                                  top: 13,
-                                                                  bottom: 87),
+                                                                  top: 34,
+                                                                  bottom: 66),
                                                               variant:
                                                                   TextFormFieldVariant
                                                                       .FillAmber400,
@@ -160,20 +127,15 @@ class RabbitDetailsForMeatSellingScreen
                                                                       .InterMedium15)
                                                         ]))),
                                             CustomTextFormField(
-                                                width: 315,
+                                                width: 311,
                                                 focusNode: FocusNode(),
                                                 controller: controller
-                                                    .rabbitNumberController,
+                                                    .rabbitNameController1,
                                                 hintText:
                                                     "lbl_rabbit_number".tr,
                                                 margin: getMargin(
-                                                    left: 23,
-                                                    top: 37,
-                                                    right: 5),
-                                                variant: TextFormFieldVariant
-                                                    .OutlineGray500,
-                                                alignment:
-                                                    Alignment.centerRight,
+                                                    left: 1, top: 54, right: 2),
+                                                alignment: Alignment.center,
                                                 validator: (value) {
                                                   if (value == null ||
                                                       (!isNumeric(value,
@@ -183,160 +145,129 @@ class RabbitDetailsForMeatSellingScreen
                                                   return null;
                                                 }),
                                             CustomTextFormField(
-                                                width: 315,
+                                                width: 311,
                                                 focusNode: FocusNode(),
                                                 controller: controller
                                                     .rabbitTypeController1,
                                                 hintText: "lbl_rabbit_type".tr,
                                                 margin: getMargin(
-                                                    left: 23,
-                                                    top: 21,
-                                                    right: 5),
-                                                variant: TextFormFieldVariant
-                                                    .OutlineGray500,
-                                                alignment:
-                                                    Alignment.centerRight),
+                                                    left: 1, top: 12, right: 2),
+                                                alignment: Alignment.center),
                                             CustomTextFormField(
-                                                width: 315,
+                                                width: 311,
                                                 focusNode: FocusNode(),
                                                 controller: controller
                                                     .rabbitBreedController1,
                                                 hintText: "lbl_rabbit_breed".tr,
                                                 margin: getMargin(
-                                                    left: 23,
-                                                    top: 21,
-                                                    right: 5),
-                                                variant: TextFormFieldVariant
-                                                    .OutlineGray500,
-                                                alignment:
-                                                    Alignment.centerRight),
-                                            Align(
-                                                alignment:
-                                                    Alignment.centerRight,
-                                                child: Padding(
-                                                    padding: getPadding(
-                                                        left: 25,
-                                                        top: 21,
-                                                        right: 7),
-                                                    child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .end,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Container(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 10,
-                                                                      top: 7,
-                                                                      bottom:
-                                                                          6),
-                                                              decoration: AppDecoration
-                                                                  .txtOutlineGray500
+                                                    left: 1, top: 12, right: 2),
+                                                alignment: Alignment.center),
+                                            Padding(
+                                                padding: getPadding(top: 12),
+                                                child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  99.00),
+                                                          padding: getPadding(
+                                                              left: 10,
+                                                              top: 15,
+                                                              bottom: 15),
+                                                          decoration: AppDecoration
+                                                              .txtOutlineBlack9001e
+                                                              .copyWith(
+                                                                  borderRadius:
+                                                                      BorderRadiusStyle
+                                                                          .txtRoundedBorder15),
+                                                          child: Text(
+                                                              "lbl_height".tr,
+                                                              maxLines: null,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: AppStyle
+                                                                  .txtRobotoRegular14
                                                                   .copyWith(
-                                                                      borderRadius:
-                                                                          BorderRadiusStyle
-                                                                              .txtRoundedBorder15),
-                                                              child: Text(
-                                                                  "lbl_height"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .left,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular14
-                                                                      .copyWith(
-                                                                          letterSpacing:
-                                                                              0.25,
-                                                                          height:
-                                                                              1.43))),
-                                                          Container(
-                                                              margin: getMargin(
-                                                                  left: 7),
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 10,
-                                                                      top: 7,
-                                                                      bottom:
-                                                                          6),
-                                                              decoration: AppDecoration
-                                                                  .txtOutlineGray500
+                                                                      letterSpacing:
+                                                                          0.25,
+                                                                      height:
+                                                                          1.43))),
+                                                      Container(
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  98.00),
+                                                          padding: getPadding(
+                                                              left: 10,
+                                                              top: 15,
+                                                              bottom: 15),
+                                                          decoration: AppDecoration
+                                                              .txtOutlineBlack9001e
+                                                              .copyWith(
+                                                                  borderRadius:
+                                                                      BorderRadiusStyle
+                                                                          .txtRoundedBorder15),
+                                                          child: Text(
+                                                              "lbl_width".tr,
+                                                              maxLines: null,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: AppStyle
+                                                                  .txtRobotoRegular14
                                                                   .copyWith(
-                                                                      borderRadius:
-                                                                          BorderRadiusStyle
-                                                                              .txtRoundedBorder15),
-                                                              child: Text(
-                                                                  "lbl_width"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .left,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular14
-                                                                      .copyWith(
-                                                                          letterSpacing:
-                                                                              0.25,
-                                                                          height:
-                                                                              1.43))),
-                                                          Container(
-                                                              margin: getMargin(
-                                                                  left: 7),
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 10,
-                                                                      top: 7,
-                                                                      bottom:
-                                                                          6),
-                                                              decoration: AppDecoration
-                                                                  .txtOutlineGray500
+                                                                      letterSpacing:
+                                                                          0.25,
+                                                                      height:
+                                                                          1.43))),
+                                                      Container(
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  99.00),
+                                                          padding: getPadding(
+                                                              left: 10,
+                                                              top: 15,
+                                                              bottom: 15),
+                                                          decoration: AppDecoration
+                                                              .txtOutlineBlack9001e
+                                                              .copyWith(
+                                                                  borderRadius:
+                                                                      BorderRadiusStyle
+                                                                          .txtRoundedBorder15),
+                                                          child: Text(
+                                                              "lbl_weight".tr,
+                                                              maxLines: null,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: AppStyle
+                                                                  .txtRobotoRegular14
                                                                   .copyWith(
-                                                                      borderRadius:
-                                                                          BorderRadiusStyle
-                                                                              .txtRoundedBorder15),
-                                                              child: Text(
-                                                                  "lbl_weight"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .left,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular14
-                                                                      .copyWith(
-                                                                          letterSpacing:
-                                                                              0.25,
-                                                                          height:
-                                                                              1.43)))
-                                                        ]))),
+                                                                      letterSpacing:
+                                                                          0.25,
+                                                                      height:
+                                                                          1.43)))
+                                                    ])),
                                             CustomTextFormField(
-                                                width: 315,
+                                                width: 311,
                                                 focusNode: FocusNode(),
-                                                controller: controller
-                                                    .datepfAcquisaController,
+                                                controller:
+                                                    controller.dOPController1,
                                                 hintText:
                                                     "msg_date_of_acquisa".tr,
                                                 margin: getMargin(
-                                                    left: 23,
-                                                    top: 21,
-                                                    right: 5),
-                                                variant: TextFormFieldVariant
-                                                    .OutlineGray500,
+                                                    left: 1, top: 12, right: 2),
                                                 textInputAction:
                                                     TextInputAction.done,
-                                                alignment:
-                                                    Alignment.centerRight)
+                                                alignment: Alignment.center)
                                           ])))
                             ])))))));
   }

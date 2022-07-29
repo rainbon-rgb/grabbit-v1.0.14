@@ -58,7 +58,7 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
                                                               left: 75,
                                                               bottom: 6),
                                                           child: Text(
-                                                              "lbl_sell_a_rabbit"
+                                                              "lbl_sell_a_rabbit2"
                                                                   .tr,
                                                               overflow:
                                                                   TextOverflow
@@ -82,7 +82,7 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
                                                     .copyWith(
                                                         borderRadius:
                                                             BorderRadiusStyle
-                                                                .roundedBorder11),
+                                                                .roundedBorder10),
                                                 child: Row(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
@@ -150,7 +150,7 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
                                                     margin: getMargin(
                                                         left: 11, top: 28),
                                                     decoration: AppDecoration
-                                                        .outlineBlack90012
+                                                        .outlineBlack900
                                                         .copyWith(
                                                             borderRadius:
                                                                 BorderRadiusStyle
@@ -175,7 +175,7 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
                                                               child: CommonImageView(
                                                                   imagePath:
                                                                       ImageConstant
-                                                                          .imgImgarabbitone,
+                                                                          .imgCalifornianrab,
                                                                   height:
                                                                       getVerticalSize(
                                                                           30.00),
@@ -228,10 +228,9 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
   }
 
   onTapImgBack() {
-    Get.toNamed(AppRoutes.homepageScreen);
+// TODO: implement Actions
   }
-
   onTapRabbitcontaine() {
-    Get.toNamed(AppRoutes.rabbitDetailsForMeatSellingScreen);
+// TODO: implement Actions
   }
 }

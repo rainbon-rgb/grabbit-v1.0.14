@@ -83,4 +83,6 @@ class FileManager {
     });
     return files;
   }
+
+  void filePickerMethod(int i, List<String> list, {required Null Function(dynamic value) getFiles}) {}
 }

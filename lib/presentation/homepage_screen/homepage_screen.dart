@@ -1,7 +1,6 @@
 import 'controller/homepage_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:grabbit/core/app_export.dart';
-import 'package:grabbit/widgets/custom_button.dart';
 
 class HomepageScreen extends GetWidget<HomepageController> {
   @override
@@ -43,9 +42,9 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                         child: Container(
                                             margin: getMargin(
                                                 left: 61,
-                                                top: 43,
+                                                top: 42,
                                                 right: 61,
-                                                bottom: 29),
+                                                bottom: 30),
                                             decoration: AppDecoration
                                                 .outlineBlack90012
                                                 .copyWith(
@@ -95,73 +94,63 @@ class HomepageScreen extends GetWidget<HomepageController> {
                             onTapCheckRabbits();
                           },
                           child: Container(
-                              height: getVerticalSize(264.00),
-                              width: getHorizontalSize(323.00),
-                              margin: getMargin(left: 18, top: 28, right: 18),
-                              child: Stack(
-                                  alignment: Alignment.topLeft,
+                              width: double.infinity,
+                              margin: getMargin(left: 19, top: 24, right: 19),
+                              decoration: AppDecoration.fillAmberA100.copyWith(
+                                  borderRadius:
+                                      BorderRadiusStyle.roundedBorder10),
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Align(
-                                        alignment: Alignment.center,
-                                        child: Container(
-                                            height: getVerticalSize(263.00),
-                                            width: getHorizontalSize(322.00),
-                                            margin: getMargin(left: 1, top: 1),
-                                            decoration: BoxDecoration(
-                                                color: ColorConstant
-                                                    .bluegray100,
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        getHorizontalSize(
-                                                            10.00))))),
-                                    CustomButton(
-                                        width: 323,
-                                        text: "lbl_check_rabbits".tr,
-                                        margin: getMargin(bottom: 10),
-                                        variant: ButtonVariant.FillAmber400,
-                                        shape: ButtonShape.CustomBorderTL10,
-                                        padding: ButtonPadding.PaddingTB15,
-                                        fontStyle:
-                                            ButtonFontStyle.RobotoRomanRegular8,
-                                        onTap: onTapBtnCheckrabbits,
-                                        alignment: Alignment.topLeft)
+                                        alignment: Alignment.centerLeft,
+                                        child: Padding(
+                                            padding: getPadding(
+                                                left: 12,
+                                                top: 11,
+                                                right: 12,
+                                                bottom: 234),
+                                            child: Text("lbl_check_rabbits".tr,
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.center,
+                                                style: AppStyle
+                                                    .txtRobotoRomanRegular20
+                                                    .copyWith(
+                                                        letterSpacing: 0.90))))
                                   ]))),
                       GestureDetector(
                           onTap: () {
                             onTapCheckRabbits1();
                           },
                           child: Container(
-                              height: getVerticalSize(264.00),
-                              width: getHorizontalSize(323.00),
+                              width: double.infinity,
                               margin: getMargin(
-                                  left: 18, top: 23, right: 18, bottom: 21),
-                              child: Stack(
-                                  alignment: Alignment.topLeft,
+                                  left: 19, top: 21, right: 17, bottom: 29),
+                              decoration: AppDecoration.fillAmberA100.copyWith(
+                                  borderRadius:
+                                      BorderRadiusStyle.roundedBorder10),
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Align(
-                                        alignment: Alignment.center,
-                                        child: Container(
-                                            height: getVerticalSize(263.00),
-                                            width: getHorizontalSize(322.00),
-                                            margin: getMargin(left: 1, top: 1),
-                                            decoration: BoxDecoration(
-                                                color: ColorConstant
-                                                    .bluegray100,
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        getHorizontalSize(
-                                                            10.00))))),
-                                    CustomButton(
-                                        width: 323,
-                                        text: "lbl_sell_rabbit".tr,
-                                        margin: getMargin(bottom: 10),
-                                        variant: ButtonVariant.FillAmber400,
-                                        shape: ButtonShape.CustomBorderTL10,
-                                        padding: ButtonPadding.PaddingT13,
-                                        fontStyle:
-                                            ButtonFontStyle.RobotoRomanRegular8,
-                                        onTap: onTapBtnSellrabbit,
-                                        alignment: Alignment.topLeft)
+                                        alignment: Alignment.centerLeft,
+                                        child: Padding(
+                                            padding: getPadding(
+                                                left: 21,
+                                                top: 12,
+                                                right: 21,
+                                                bottom: 20),
+                                            child: Text("lbl_sell_a_rabbit".tr,
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.center,
+                                                style: AppStyle
+                                                    .txtRobotoRomanRegular20
+                                                    .copyWith(
+                                                        letterSpacing: 0.90))))
                                   ])))
                     ]))))));
   }
@@ -174,15 +163,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
     Get.toNamed(AppRoutes.checkRabbitsScreen);
   }
 
-  onTapBtnCheckrabbits() {
-    Get.toNamed(AppRoutes.checkRabbitsScreen);
-  }
-
   onTapCheckRabbits1() {
-    Get.toNamed(AppRoutes.sellARabbitScreen);
-  }
-
-  onTapBtnSellrabbit() {
     Get.toNamed(AppRoutes.sellARabbitScreen);
   }
 }

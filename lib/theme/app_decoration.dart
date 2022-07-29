@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:grabbit/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get txtOutlineGray500 => BoxDecoration(
-        color: ColorConstant.amberA100,
+  static BoxDecoration get outlineBlack90012 => BoxDecoration(
+        color: ColorConstant.whiteA700,
         border: Border.all(
-          color: ColorConstant.gray500,
+          color: ColorConstant.black900,
           width: getHorizontalSize(
             1.00,
           ),
         ),
       );
-  static BoxDecoration get outlineBlack90012 => BoxDecoration(
+  static BoxDecoration get outlineBlack900 => BoxDecoration(
         color: ColorConstant.whiteA7007c,
         border: Border.all(
           color: ColorConstant.black900,
@@ -34,14 +34,6 @@ class AppDecoration {
             ),
           ),
         ],
-      );
-  static BoxDecoration get outlineBlack900 => BoxDecoration(
-        border: Border.all(
-          color: ColorConstant.black900,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
       );
   static BoxDecoration get txtOutlineBlack9001e12 => BoxDecoration(
         border: Border.all(
@@ -92,21 +84,9 @@ class AppDecoration {
 }
 
 class BorderRadiusStyle {
-  static BorderRadius roundedBorder5 = BorderRadius.circular(
-    getHorizontalSize(
-      5.00,
-    ),
-  );
-
   static BorderRadius roundedBorder15 = BorderRadius.circular(
     getHorizontalSize(
       15.00,
-    ),
-  );
-
-  static BorderRadius circleBorder41 = BorderRadius.circular(
-    getHorizontalSize(
-      41.00,
     ),
   );
 
@@ -116,9 +96,15 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius roundedBorder11 = BorderRadius.circular(
+  static BorderRadius circleBorder41 = BorderRadius.circular(
     getHorizontalSize(
-      11.00,
+      41.00,
+    ),
+  );
+
+  static BorderRadius roundedBorder10 = BorderRadius.circular(
+    getHorizontalSize(
+      10.00,
     ),
   );
 

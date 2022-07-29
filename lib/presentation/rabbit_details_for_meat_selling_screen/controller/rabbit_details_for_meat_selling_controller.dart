@@ -3,15 +3,15 @@ import 'package:grabbit/presentation/rabbit_details_for_meat_selling_screen/mode
 import 'package:flutter/material.dart';
 
 class RabbitDetailsForMeatSellingController extends GetxController {
-  TextEditingController statusController = TextEditingController();
+  TextEditingController groupFiftyNineController = TextEditingController();
 
-  TextEditingController rabbitNumberController = TextEditingController();
+  TextEditingController rabbitNameController1 = TextEditingController();
 
   TextEditingController rabbitTypeController1 = TextEditingController();
 
   TextEditingController rabbitBreedController1 = TextEditingController();
 
-  TextEditingController datepfAcquisaController = TextEditingController();
+  TextEditingController dOPController1 = TextEditingController();
 
   Rx<RabbitDetailsForMeatSellingModel> rabbitDetailsForMeatSellingModelObj =
       RabbitDetailsForMeatSellingModel().obs;
@@ -24,10 +24,10 @@ class RabbitDetailsForMeatSellingController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    statusController.dispose();
-    rabbitNumberController.dispose();
+    groupFiftyNineController.dispose();
+    rabbitNameController1.dispose();
     rabbitTypeController1.dispose();
     rabbitBreedController1.dispose();
-    datepfAcquisaController.dispose();
+    dOPController1.dispose();
   }
 }
