@@ -20,20 +20,11 @@ class AppStyle {
   );
 
   static TextStyle txtPoppinsRegular15 = TextStyle(
-    color: ColorConstant.black900A3,
-    fontSize: getFontSize(
-      15,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtAbelRegular15 = TextStyle(
     color: ColorConstant.black900A2,
     fontSize: getFontSize(
       15,
     ),
-    fontFamily: 'Abel',
+    fontFamily: 'Poppins',
     fontWeight: FontWeight.w400,
   );
 
@@ -42,6 +33,15 @@ class AppStyle {
     fontSize: getFontSize(
       20,
     ),
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle txtRobotoRomanRegular15 = TextStyle(
+    color: ColorConstant.black900,
+    fontSize: getFontSize(
+      15,
+    ),
+    fontFamily: 'Roboto',
     fontWeight: FontWeight.w400,
   );
 
@@ -64,7 +64,7 @@ class AppStyle {
   );
 
   static TextStyle txtPoppinsRegular8 = TextStyle(
-    color: ColorConstant.black900A3,
+    color: ColorConstant.black900A2,
     fontSize: getFontSize(
       8,
     ),

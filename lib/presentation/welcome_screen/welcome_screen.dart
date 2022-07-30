@@ -26,11 +26,10 @@ class WelcomeScreen extends GetWidget<WelcomeController> {
                           Align(
                               alignment: Alignment.topLeft,
                               child: Padding(
-                                  padding:
-                                      getPadding(top: 2, right: 10, bottom: 10),
+                                  padding: getPadding(right: 10, bottom: 10),
                                   child: CommonImageView(
                                       imagePath: ImageConstant.imgImagewhiteone,
-                                      height: getVerticalSize(607.00),
+                                      height: getVerticalSize(604.00),
                                       width: getHorizontalSize(310.00)))),
                           Align(
                               alignment: Alignment.bottomRight,

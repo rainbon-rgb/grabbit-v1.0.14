@@ -13,6 +13,8 @@ class SelectedRabbitController extends GetxController {
 
   List<RabbitProfile> rabbitProfileModelList = [];
 
+  get statusController => null;
+
   @override
   void onReady() {
     super.onReady();

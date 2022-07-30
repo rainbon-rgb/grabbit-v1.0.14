@@ -1,12 +1,13 @@
-import 'controller/rabbit_details_for_meat_selling_controller.dart';
+import 'controller/edit_selected_rabbit_info_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:grabbit/core/app_export.dart';
 import 'package:grabbit/core/utils/validation_functions.dart';
+import 'package:grabbit/widgets/custom_button.dart';
 import 'package:grabbit/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
-class RabbitDetailsForMeatSellingScreen
-    extends GetWidget<RabbitDetailsForMeatSellingController> {
+class EditSelectedRabbitInfoScreen
+    extends GetWidget<EditSelectedRabbitInfoController> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -46,38 +47,56 @@ class RabbitDetailsForMeatSellingScreen
                                                             MainAxisSize.min,
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
-                                                                .center,
+                                                                .start,
                                                         children: [
                                                           Align(
                                                               alignment: Alignment
                                                                   .centerLeft,
-                                                              child:
-                                                                  GestureDetector(
-                                                                      onTap:
-                                                                          () {
-                                                                        onTapImgBack();
-                                                                      },
-                                                                      child: Padding(
-                                                                          padding: getPadding(
-                                                                              top:
-                                                                                  13,
-                                                                              right:
-                                                                                  10),
-                                                                          child: CommonImageView(
-                                                                              imagePath: ImageConstant.imgBack,
-                                                                              height: getVerticalSize(28.00),
-                                                                              width: getHorizontalSize(48.00))))),
+                                                              child: Container(
+                                                                  width: size
+                                                                      .width,
+                                                                  margin:
+                                                                      getMargin(
+                                                                          top:
+                                                                              13,
+                                                                          right:
+                                                                              10),
+                                                                  child: Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .center,
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      children: [
+                                                                        GestureDetector(
+                                                                            onTap:
+                                                                                () {
+                                                                              onTapImgBack();
+                                                                            },
+                                                                            child: CommonImageView(
+                                                                                imagePath: ImageConstant.imgBack,
+                                                                                height: getVerticalSize(28.00),
+                                                                                width: getHorizontalSize(48.00))),
+                                                                        Padding(
+                                                                            padding:
+                                                                                getPadding(top: 3, bottom: 3),
+                                                                            child: Text("lbl_edit_details".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center, style: AppStyle.txtPoppinsSemiBold20.copyWith()))
+                                                                      ]))),
                                                           Align(
                                                               alignment:
                                                                   Alignment
                                                                       .center,
                                                               child: Padding(
                                                                   padding: getPadding(
-                                                                      left: 23,
-                                                                      top: 1,
-                                                                      right: 23,
+                                                                      left: 22,
+                                                                      top: 37,
+                                                                      right: 22,
                                                                       bottom:
-                                                                          25),
+                                                                          21),
                                                                   child: Row(
                                                                       mainAxisAlignment:
                                                                           MainAxisAlignment
@@ -89,24 +108,23 @@ class RabbitDetailsForMeatSellingScreen
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Container(
-                                                                            height:
-                                                                                getVerticalSize(133.00),
-                                                                            width: getHorizontalSize(146.00),
-                                                                            child: Stack(alignment: Alignment.center, children: [
-                                                                              Align(alignment: Alignment.centerLeft, child: Container(height: getVerticalSize(133.00), width: getHorizontalSize(146.00), decoration: BoxDecoration(color: ColorConstant.gray200, borderRadius: BorderRadius.circular(getHorizontalSize(73.00))))),
-                                                                              Align(alignment: Alignment.center, child: Padding(padding: getPadding(left: 14, top: 29, right: 15, bottom: 29), child: CommonImageView(imagePath: ImageConstant.imgCalifornianrab, height: getVerticalSize(73.00), width: getHorizontalSize(116.00))))
-                                                                            ])),
+                                                                        ClipRRect(
+                                                                            borderRadius: BorderRadius.circular(getHorizontalSize(
+                                                                                13.00)),
+                                                                            child: CommonImageView(
+                                                                                imagePath: ImageConstant.img11,
+                                                                                height: getVerticalSize(112.00),
+                                                                                width: getHorizontalSize(144.00))),
                                                                         CustomTextFormField(
                                                                             width:
                                                                                 143,
                                                                             focusNode:
                                                                                 FocusNode(),
                                                                             controller:
-                                                                                controller.groupFiftyNineController1,
+                                                                                controller.groupFiftyNineController,
                                                                             hintText: "lbl_status".tr,
-                                                                            margin: getMargin(top: 34, bottom: 66),
-                                                                            variant: TextFormFieldVariant.OutlineBlack900,
+                                                                            margin: getMargin(top: 23, bottom: 56),
+                                                                            variant: TextFormFieldVariant.FillAmber400,
                                                                             shape: TextFormFieldShape.RoundedBorder5,
                                                                             padding: TextFormFieldPadding.PaddingT8,
                                                                             fontStyle: TextFormFieldFontStyle.InterMedium15)
@@ -116,12 +134,12 @@ class RabbitDetailsForMeatSellingScreen
                                                 width: 311,
                                                 focusNode: FocusNode(),
                                                 controller: controller
-                                                    .rabbitNameController2,
+                                                    .rabbitNameController1,
                                                 hintText:
                                                     "lbl_rabbit_number".tr,
                                                 margin: getMargin(
                                                     left: 23,
-                                                    top: 29,
+                                                    top: 18,
                                                     right: 23),
                                                 validator: (value) {
                                                   if (value == null ||
@@ -135,7 +153,7 @@ class RabbitDetailsForMeatSellingScreen
                                                 width: 311,
                                                 focusNode: FocusNode(),
                                                 controller: controller
-                                                    .rabbitTypeController2,
+                                                    .rabbitTypeController1,
                                                 hintText: "lbl_rabbit_type".tr,
                                                 margin: getMargin(
                                                     left: 23,
@@ -145,7 +163,7 @@ class RabbitDetailsForMeatSellingScreen
                                                 width: 311,
                                                 focusNode: FocusNode(),
                                                 controller: controller
-                                                    .rabbitBreedController2,
+                                                    .rabbitBreedController1,
                                                 hintText: "lbl_rabbit_breed".tr,
                                                 margin: getMargin(
                                                     left: 23,
@@ -221,41 +239,22 @@ class RabbitDetailsForMeatSellingScreen
                                                                           0.25,
                                                                       height:
                                                                           1.43))),
-                                                      Container(
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  99.00),
-                                                          margin: getMargin(
-                                                              left: 9),
-                                                          padding: getPadding(
-                                                              left: 10,
-                                                              top: 15,
-                                                              bottom: 15),
-                                                          decoration: AppDecoration
-                                                              .txtOutlineBlack9001e
-                                                              .copyWith(
-                                                                  borderRadius:
-                                                                      BorderRadiusStyle
-                                                                          .txtRoundedBorder15),
-                                                          child: Text(
+                                                      CustomTextFormField(
+                                                          width: 99,
+                                                          focusNode:
+                                                              FocusNode(),
+                                                          controller: controller
+                                                              .rabbitWeightController1,
+                                                          hintText:
                                                               "lbl_weight".tr,
-                                                              maxLines: null,
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .left,
-                                                              style: AppStyle
-                                                                  .txtRobotoRegular14
-                                                                  .copyWith(
-                                                                      letterSpacing:
-                                                                          0.25,
-                                                                      height:
-                                                                          1.43)))
+                                                          margin: getMargin(
+                                                              left: 9))
                                                     ])),
                                             CustomTextFormField(
                                                 width: 311,
                                                 focusNode: FocusNode(),
                                                 controller:
-                                                    controller.dOPController2,
+                                                    controller.dOPController1,
                                                 hintText:
                                                     "msg_date_of_acquisa".tr,
                                                 margin: getMargin(
@@ -263,12 +262,31 @@ class RabbitDetailsForMeatSellingScreen
                                                     top: 12,
                                                     right: 23),
                                                 textInputAction:
-                                                    TextInputAction.done)
+                                                    TextInputAction.done),
+                                            CustomButton(
+                                                width: 267,
+                                                text: "lbl_save".tr,
+                                                margin: getMargin(
+                                                    left: 23,
+                                                    top: 129,
+                                                    right: 23),
+                                                onTap: onTapBtnSave)
                                           ])))
                             ])))))));
   }
 
   onTapImgBack() {
-    Get.toNamed(AppRoutes.sellARabbitScreen);
+    Get.toNamed(AppRoutes.selectedRabbitScreen);
+  }
+
+  onTapBtnSave() {
+    Map<String, dynamic> rabbitProfileModel = {
+      'RabbitNumber': controller.rabbitNameController1.text,
+      'RabbitType': controller.rabbitTypeController1.text,
+      'RabbitBreed': controller.rabbitBreedController1.text,
+      'DateofPurchase': controller.dOPController1.text,
+      'Weight': '' //TODO:Add documentId,
+    };
+    controller.addRabbitProfileDocument(rabbitProfileModel);
   }
 }

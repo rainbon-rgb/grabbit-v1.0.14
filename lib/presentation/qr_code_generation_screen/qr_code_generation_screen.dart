@@ -62,8 +62,7 @@ class QrCodeGenerationScreen extends GetWidget<QrCodeGenerationController> {
                                     CustomButton(
                                         width: 267,
                                         text: "lbl_download".tr,
-                                        onTap: onTapBtnDownload,
-                                        alignment: Alignment.centerLeft)
+                                        alignment: Alignment.center)
                                   ]))),
                       CustomButton(
                           width: 267,
@@ -77,17 +76,9 @@ class QrCodeGenerationScreen extends GetWidget<QrCodeGenerationController> {
                     ]))))));
   }
 
-  onTapBtnDownload() async {
-    await PermissionManager.askForPermission(Permission.storage);
-    List<String?>? fileList = [];
-//TODO: use permission for using selected files
-    FileManager().filePickerMethod(1000 * 1000, ['png', 'jpeg'],
-        getFiles: (value) {
-      fileList = value;
-    });
-  }
+
 
   onTapBtnDone() {
-    Get.toNamed(AppRoutes.homepageScreen);
+// TODO: implement Actions
   }
 }

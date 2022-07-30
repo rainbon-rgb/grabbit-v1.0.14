@@ -45,7 +45,6 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        alignment: Alignment.center,
         width: getHorizontalSize(width ?? 0),
         margin: margin,
         padding: _setPadding(),
@@ -78,10 +77,10 @@ class CustomButton extends StatelessWidget {
 
   _setColor() {
     switch (variant) {
-      case ButtonVariant.FillAmber400:
-        return ColorConstant.amber400;
       case ButtonVariant.OutlineBlack9001_2:
         return ColorConstant.whiteA700;
+      case ButtonVariant.FillAmber400:
+        return ColorConstant.amber400;
       default:
         return ColorConstant.amber400;
     }
@@ -110,16 +109,16 @@ class CustomButton extends StatelessWidget {
 
   _setBorderRadius() {
     switch (shape) {
-      case ButtonShape.RoundedBorder12:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            12.00,
-          ),
-        );
       case ButtonShape.RoundedBorder16:
         return BorderRadius.circular(
           getHorizontalSize(
             16.85,
+          ),
+        );
+      case ButtonShape.RoundedBorder12:
+        return BorderRadius.circular(
+          getHorizontalSize(
+            12.00,
           ),
         );
       case ButtonShape.Square:
@@ -135,15 +134,6 @@ class CustomButton extends StatelessWidget {
 
   _setFontStyle() {
     switch (fontStyle) {
-      case ButtonFontStyle.AbelRegular20:
-        return TextStyle(
-          color: ColorConstant.black900,
-          fontSize: getFontSize(
-            20,
-          ),
-          fontFamily: 'Abel',
-          fontWeight: FontWeight.w400,
-        );
       case ButtonFontStyle.MontserratRomanMedium20:
         return TextStyle(
           color: ColorConstant.black900,
@@ -162,6 +152,15 @@ class CustomButton extends StatelessWidget {
           fontFamily: 'Montserrat',
           fontWeight: FontWeight.w500,
         );
+      case ButtonFontStyle.AbelRegular20:
+        return TextStyle(
+          color: ColorConstant.black900,
+          fontSize: getFontSize(
+            20,
+          ),
+          fontFamily: 'Abel',
+          fontWeight: FontWeight.w400,
+        );
       default:
         return TextStyle(
           color: ColorConstant.black900,
@@ -178,20 +177,20 @@ class CustomButton extends StatelessWidget {
 enum ButtonShape {
   Square,
   CircleBorder20,
-  RoundedBorder12,
   RoundedBorder16,
+  RoundedBorder12,
 }
 enum ButtonPadding {
   PaddingAll9,
 }
 enum ButtonVariant {
   OutlineBlack900,
-  FillAmber400,
   OutlineBlack9001_2,
+  FillAmber400,
 }
 enum ButtonFontStyle {
   MontserratRomanMedium23,
-  AbelRegular20,
   MontserratRomanMedium20,
   MontserratRomanMedium15,
+  AbelRegular20,
 }

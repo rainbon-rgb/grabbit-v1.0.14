@@ -19,12 +19,13 @@ class CheckRabbitsScreen extends GetWidget<CheckRabbitsController> {
                         width: size.width,
                         child: Stack(children: [
                           Align(
-                              alignment: Alignment.topCenter,
+                              alignment: Alignment.topLeft,
                               child: Container(
-                                  margin: getMargin(
-                                      left: 7, top: 27, right: 10, bottom: 27),
+                                  margin: getMargin(bottom: 10),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: [
@@ -32,101 +33,9 @@ class CheckRabbitsScreen extends GetWidget<CheckRabbitsController> {
                                             alignment: Alignment.centerLeft,
                                             child: Container(
                                                 width: size.width,
-                                                margin: getMargin(right: 10),
-                                                child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      CommonImageView(
-                                                          imagePath:
-                                                              ImageConstant
-                                                                  .imgBack,
-                                                          height:
-                                                              getVerticalSize(
-                                                                  28.00),
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  48.00)),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              bottom: 6),
-                                                          child: Text(
-                                                              "lbl_rabbit".tr,
-                                                              overflow:
-                                                                  TextOverflow
-                                                                      .ellipsis,
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: AppStyle
-                                                                  .txtPoppinsSemiBold20
-                                                                  .copyWith()))
-                                                    ]))),
-                                        Align(
-                                            alignment: Alignment.center,
-                                            child: Padding(
-                                                padding: getPadding(
-                                                    left: 11, top: 27),
-                                                child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      CustomButton(
-                                                          width: 151,
-                                                          text:
-                                                              "lbl_add_a_rabbit"
-                                                                  .tr,
-                                                          variant: ButtonVariant
-                                                              .FillAmber400,
-                                                          shape: ButtonShape
-                                                              .RoundedBorder12,
-                                                          fontStyle:
-                                                              ButtonFontStyle
-                                                                  .AbelRegular20,
-                                                          onTap:
-                                                              onTapBtnAddarabbit),
-                                                      CustomButton(
-                                                          width: 151,
-                                                          text:
-                                                              "lbl_delete_a_rabbit"
-                                                                  .tr,
-                                                          variant: ButtonVariant
-                                                              .FillAmber400,
-                                                          shape: ButtonShape
-                                                              .RoundedBorder12,
-                                                          fontStyle:
-                                                              ButtonFontStyle
-                                                                  .AbelRegular20,
-                                                          onTap:
-                                                              onTapBtnDeletearabbit)
-                                                    ]))),
-                                        Align(
-                                            alignment: Alignment.center,
-                                            child: GestureDetector(
-                                                onTap: () {
-                                                  onTapRabbitcontaine();
-                                                },
                                                 child: Container(
-                                                    margin: getMargin(
-                                                        left: 11, top: 63),
                                                     decoration: AppDecoration
-                                                        .outlineBlack900
-                                                        .copyWith(
-                                                            borderRadius:
-                                                                BorderRadiusStyle
-                                                                    .circleBorder30),
+                                                        .fillAmber400,
                                                     child: Row(
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
@@ -140,38 +49,152 @@ class CheckRabbitsScreen extends GetWidget<CheckRabbitsController> {
                                                           Padding(
                                                               padding:
                                                                   getPadding(
-                                                                      left: 16,
+                                                                      left: 7,
                                                                       top: 14,
                                                                       bottom:
-                                                                          15),
+                                                                          13),
                                                               child: CommonImageView(
                                                                   imagePath:
                                                                       ImageConstant
-                                                                          .imgCalifornianrab,
+                                                                          .imgBack,
                                                                   height:
                                                                       getVerticalSize(
-                                                                          30.00),
+                                                                          28.00),
                                                                   width: getHorizontalSize(
+                                                                      48.00))),
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 91,
+                                                                      top: 17,
+                                                                      right:
+                                                                          146,
+                                                                      bottom:
+                                                                          16),
+                                                              child: Text(
+                                                                  "lbl_rabbit"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtPoppinsSemiBold20
+                                                                      .copyWith()))
+                                                        ])))),
+                                        Padding(
+                                            padding: getPadding(
+                                                left: 18, top: 27, right: 17),
+                                            child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  CustomButton(
+                                                      width: 151,
+                                                      text:
+                                                          "lbl_add_a_rabbit".tr,
+                                                      variant: ButtonVariant
+                                                          .FillAmber400,
+                                                      shape: ButtonShape
+                                                          .RoundedBorder12,
+                                                      fontStyle: ButtonFontStyle
+                                                          .AbelRegular20,
+                                                      onTap:
+                                                          onTapBtnAddarabbit),
+                                                  CustomButton(
+                                                      width: 151,
+                                                      text:
+                                                          "lbl_delete_a_rabbit2"
+                                                              .tr,
+                                                      variant: ButtonVariant
+                                                          .FillAmber400,
+                                                      shape: ButtonShape
+                                                          .RoundedBorder12,
+                                                      fontStyle: ButtonFontStyle
+                                                          .AbelRegular20,
+                                                      onTap:
+                                                          onTapBtnDeletearabbit2)
+                                                ])),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapRabbitcontaine();
+                                            },
+                                            child: Container(
+                                                margin: getMargin(
+                                                    left: 18,
+                                                    top: 63,
+                                                    right: 17),
+                                                decoration: AppDecoration
+                                                    .outlineBlack90012
+                                                    .copyWith(
+                                                        borderRadius:
+                                                            BorderRadiusStyle
+                                                                .circleBorder30),
+                                                child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              left: 16,
+                                                              top: 14,
+                                                              bottom: 15),
+                                                          child: CommonImageView(
+                                                              imagePath:
+                                                                  ImageConstant
+                                                                      .imgCalifornianrab,
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      30.00),
+                                                              width:
+                                                                  getHorizontalSize(
                                                                       39.00))),
-                                                          Container(
-                                                              margin: getMargin(
-                                                                  left: 21,
-                                                                  top: 15,
-                                                                  right: 165,
-                                                                  bottom: 15),
-                                                              child: Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .min,
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Text(
-                                                                        "lbl_rabbit_1001"
+                                                      Container(
+                                                          margin: getMargin(
+                                                              left: 21,
+                                                              top: 15,
+                                                              right: 165,
+                                                              bottom: 15),
+                                                          child: Column(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .start,
+                                                              children: [
+                                                                Text(
+                                                                    "lbl_rabbit_1001"
+                                                                        .tr,
+                                                                    overflow:
+                                                                        TextOverflow
+                                                                            .ellipsis,
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .left,
+                                                                    style: AppStyle
+                                                                        .txtPoppinsRegular15
+                                                                        .copyWith()),
+                                                                Padding(
+                                                                    padding: getPadding(
+                                                                        right:
+                                                                            10),
+                                                                    child: Text(
+                                                                        "lbl_view_details"
                                                                             .tr,
                                                                         overflow:
                                                                             TextOverflow
@@ -180,21 +203,10 @@ class CheckRabbitsScreen extends GetWidget<CheckRabbitsController> {
                                                                             TextAlign
                                                                                 .left,
                                                                         style: AppStyle
-                                                                            .txtPoppinsRegular15
-                                                                            .copyWith()),
-                                                                    Padding(
-                                                                        padding: getPadding(
-                                                                            right:
-                                                                                10),
-                                                                        child: Text(
-                                                                            "lbl_view_details"
-                                                                                .tr,
-                                                                            overflow:
-                                                                                TextOverflow.ellipsis,
-                                                                            textAlign: TextAlign.left,
-                                                                            style: AppStyle.txtPoppinsRegular8.copyWith(decoration: TextDecoration.underline)))
-                                                                  ]))
-                                                        ]))))
+                                                                            .txtPoppinsRegular8
+                                                                            .copyWith(decoration: TextDecoration.underline)))
+                                                              ]))
+                                                    ])))
                                       ])))
                         ]))))));
   }
@@ -203,7 +215,7 @@ class CheckRabbitsScreen extends GetWidget<CheckRabbitsController> {
     Get.toNamed(AppRoutes.scanScreen);
   }
 
-  onTapBtnDeletearabbit() {
+  onTapBtnDeletearabbit2() {
     Get.bottomSheet(
       DeleteARabbitBottomsheet(
         Get.put(

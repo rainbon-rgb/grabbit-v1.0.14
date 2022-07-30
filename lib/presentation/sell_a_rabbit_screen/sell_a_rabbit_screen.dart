@@ -72,59 +72,66 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
                                                     ]))),
                                         Align(
                                             alignment: Alignment.center,
-                                            child: Container(
-                                                margin: getMargin(
-                                                    left: 11,
-                                                    top: 36,
-                                                    right: 11),
-                                                decoration: AppDecoration
-                                                    .fillAmber400
-                                                    .copyWith(
-                                                        borderRadius:
-                                                            BorderRadiusStyle
-                                                                .roundedBorder10),
-                                                child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 11,
-                                                              bottom: 10),
-                                                          child: CommonImageView(
-                                                              imagePath:
-                                                                  ImageConstant
-                                                                      .imgCamera,
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      24.00),
-                                                              width:
-                                                                  getHorizontalSize(
+                                            child: GestureDetector(
+                                                onTap: () {
+                                                  onTapScanaqrcode();
+                                                },
+                                                child: Container(
+                                                    margin: getMargin(
+                                                        left: 11,
+                                                        top: 36,
+                                                        right: 11),
+                                                    decoration: AppDecoration
+                                                        .fillAmber400
+                                                        .copyWith(
+                                                            borderRadius:
+                                                                BorderRadiusStyle
+                                                                    .roundedBorder10),
+                                                    child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      top: 11,
+                                                                      bottom:
+                                                                          10),
+                                                              child: CommonImageView(
+                                                                  imagePath:
+                                                                      ImageConstant
+                                                                          .imgCamera,
+                                                                  height:
+                                                                      getVerticalSize(
+                                                                          24.00),
+                                                                  width: getHorizontalSize(
                                                                       23.00))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              left: 10,
-                                                              top: 12,
-                                                              bottom: 14),
-                                                          child: Text(
-                                                              "lbl_scan_qr_code"
-                                                                  .tr,
-                                                              overflow:
-                                                                  TextOverflow
-                                                                      .ellipsis,
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: AppStyle
-                                                                  .txtAbelRegular20
-                                                                  .copyWith()))
-                                                    ]))),
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 10,
+                                                                      top: 12,
+                                                                      bottom:
+                                                                          14),
+                                                              child: Text(
+                                                                  "lbl_scan_qr_code"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtAbelRegular20
+                                                                      .copyWith()))
+                                                        ])))),
                                         Align(
                                             alignment: Alignment.center,
                                             child: Padding(
@@ -150,7 +157,7 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
                                                     margin: getMargin(
                                                         left: 11, top: 28),
                                                     decoration: AppDecoration
-                                                        .outlineBlack900
+                                                        .outlineBlack90012
                                                         .copyWith(
                                                             borderRadius:
                                                                 BorderRadiusStyle
@@ -228,9 +235,13 @@ class SellARabbitScreen extends GetWidget<SellARabbitController> {
   }
 
   onTapImgBack() {
-// TODO: implement Actions
+    Get.toNamed(AppRoutes.homepageScreen);
   }
+  onTapScanaqrcode() {
+    Get.toNamed(AppRoutes.scanQrScreen);
+  }
+
   onTapRabbitcontaine() {
-// TODO: implement Actions
+    Get.toNamed(AppRoutes.rabbitDetailsForMeatSellingScreen);
   }
 }

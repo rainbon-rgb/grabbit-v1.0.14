@@ -2,21 +2,17 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class ColorConstant {
-  static Color black900A2 = fromHex('#a2000000');
-
-  static Color gray500 = fromHex('#919191');
+  static Color black900A2 = fromHex('#a2040404');
 
   static Color amber400 = fromHex('#ffd223');
 
   static Color bluegray100 = fromHex('#d9d9d9');
 
-  static Color gray200 = fromHex('#ececec');
-
   static Color black9003f = fromHex('#3f000000');
 
-  static Color amberA100 = fromHex('#fee16f');
+  static Color gray200 = fromHex('#ececec');
 
-  static Color black900A3 = fromHex('#a2040404');
+  static Color amberA100 = fromHex('#fee16f');
 
   static Color gray300 = fromHex('#e6e3e3');
 

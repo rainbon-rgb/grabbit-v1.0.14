@@ -46,7 +46,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                 right: 61,
                                                 bottom: 30),
                                             decoration: AppDecoration
-                                                .outlineBlack90012
+                                                .outlineBlack900
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
@@ -116,7 +116,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.center,
                                                 style: AppStyle
-                                                    .txtRobotoRomanRegular20
+                                                    .txtRobotoRomanRegular15
                                                     .copyWith(
                                                         letterSpacing: 0.90))))
                                   ]))),
@@ -148,7 +148,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.center,
                                                 style: AppStyle
-                                                    .txtRobotoRomanRegular20
+                                                    .txtRobotoRomanRegular15
                                                     .copyWith(
                                                         letterSpacing: 0.90))))
                                   ])))

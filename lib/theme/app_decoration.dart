@@ -3,15 +3,6 @@ import 'package:grabbit/core/app_export.dart';
 
 class AppDecoration {
   static BoxDecoration get outlineBlack90012 => BoxDecoration(
-        color: ColorConstant.whiteA700,
-        border: Border.all(
-          color: ColorConstant.black900,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
-      );
-  static BoxDecoration get outlineBlack900 => BoxDecoration(
         color: ColorConstant.whiteA7007c,
         border: Border.all(
           color: ColorConstant.black900,
@@ -34,6 +25,15 @@ class AppDecoration {
             ),
           ),
         ],
+      );
+  static BoxDecoration get outlineBlack900 => BoxDecoration(
+        color: ColorConstant.whiteA700,
+        border: Border.all(
+          color: ColorConstant.black900,
+          width: getHorizontalSize(
+            1.00,
+          ),
+        ),
       );
   static BoxDecoration get txtOutlineBlack9001e12 => BoxDecoration(
         border: Border.all(
@@ -90,15 +90,15 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius circleBorder30 = BorderRadius.circular(
-    getHorizontalSize(
-      30.24,
-    ),
-  );
-
   static BorderRadius circleBorder41 = BorderRadius.circular(
     getHorizontalSize(
       41.00,
+    ),
+  );
+
+  static BorderRadius circleBorder30 = BorderRadius.circular(
+    getHorizontalSize(
+      30.24,
     ),
   );
 
