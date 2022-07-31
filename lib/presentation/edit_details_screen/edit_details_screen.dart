@@ -4,7 +4,6 @@ import 'package:grabbit/core/app_export.dart';
 import 'package:grabbit/core/utils/validation_functions.dart';
 import 'package:grabbit/widgets/custom_button.dart';
 import 'package:grabbit/widgets/custom_text_form_field.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 // ignore_for_file: must_be_immutable
 class EditDetailsScreen extends GetWidget<EditDetailsController> {

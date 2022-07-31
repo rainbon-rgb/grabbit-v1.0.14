@@ -2,7 +2,6 @@ import 'controller/rabbit_generated_info_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:grabbit/core/app_export.dart';
 import 'package:grabbit/widgets/custom_button.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class RabbitGeneratedInfoScreen
     extends GetWidget<RabbitGeneratedInfoController> {

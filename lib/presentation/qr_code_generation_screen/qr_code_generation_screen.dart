@@ -79,6 +79,6 @@ class QrCodeGenerationScreen extends GetWidget<QrCodeGenerationController> {
 
 
   onTapBtnDone() {
-// TODO: implement Actions
+    Get.toNamed(AppRoutes.homepageScreen);
   }
 }
